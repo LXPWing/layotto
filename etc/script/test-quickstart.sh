@@ -35,6 +35,8 @@ quickstarts_in_default="docs/en/start/configuration/start.md
   docs/en/start/trace/prometheus.md
   docs/en/start/wasm/start.md
   docs/zh/start/wasm/start.md
+  docs/en/start/secret/start.md
+  docs/zh/start/secret/start.md
 "
 
 # In advance mod, we test these docs with golang 1.17
@@ -53,7 +55,7 @@ sh etc/script/download_etcd.sh
 # release all resources
 release_resource() {
   # kill processes
-  processes="layotto layotto_wasmer etcd go"
+  processes="layotto layotto_wasmer etcd server client go"
   for key in ${processes}; do
     if killall $key; then
       echo "$key released"
