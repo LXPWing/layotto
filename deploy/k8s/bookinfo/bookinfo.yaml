@@ -342,17 +342,17 @@ spec:
       - name: tmp
         emptyDir: {}
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: previews
-  labels:
-    app: previews
-    service: previews
-spec:
-  ports:
-    - name: layotto-preview-server
-      port: 9080
-      targetPort: 9080
-  selector:
-    app: preview-server
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: previews
+#  labels:
+#    app: previews
+#    service: previews
+#spec:
+#  ports:
+#    - name: layotto-preview-server
+#      port: 9080
+#      targetPort: 9080
+#  selector:
+#    app: preview-server
